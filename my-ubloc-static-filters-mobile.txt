@@ -1,5 +1,7 @@
-! Mobile list for Firefox
-! 2025-11-06
+! Title: Mobile list for Firefox
+! Last modified: 2025-11-06 20:25
+! Homepage: https://github.com/toguro-gh/uBlock-rules
+! License: https://creativecommons.org/publicdomain/zero/1.0/legalcode.en
 
 ! Other
 pornhub.com##+js(set-cookie, accessAgeDisclaimerPH, 2)
@@ -88,3 +90,4 @@ instagram.com##div[role="button"]:has(> div > video)
 
 ! Amazon
 amazon.de##.nav-flyout.nav-coreFlyout.glow-toaster-slot-default, #desktop-dp-ilm_feature_div_01
+

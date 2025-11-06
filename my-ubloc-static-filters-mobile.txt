@@ -1,0 +1,90 @@
+! Mobile list for Firefox
+! 2025-11-06
+
+! Other
+pornhub.com##+js(set-cookie, accessAgeDisclaimerPH, 2)
+
+! HUP
+hup.hu##body:style(margin:auto!important; max-width: 1050px!important)
+hup.hu##.layout-content:style(margin:auto!important; width: 100%!important)
+hup.hu##img:style(display:block; margin-left:auto; margin-right:auto)
+hup.hu##.node--view-mode-teaser.node--sticky.node--promoted.node, .feed-icons
+hup.hu###block-hupforumblokk, .layout-sidebar-second, .layout-sidebar-first
+hup.hu##a:has-text(/\[POL\]/i):upward(2)
+||hup.hu/images/*
+
+! Index.hu
+index.hu##div.cimlap-cikkgyujto:style(width: 100% !important)
+index.hu##div.goal, div.esport1, div.greendex, .legfrissebb_wrapper
+index.hu##section.porthu-doboz-new, section.bloghu, div.pp-hasab
+index.hu##div.kisallatos, div.betonepodcast, div.femina, div.velvet
+index.hu##section.welove, section.blokk_budapest, section.divany-doboz
+index.hu##section.blokk_nezzen-bele, .newbox.container.welovehu, .aisummit_index
+index.hu##.idojaras.showstopper,.legnezettebb_wrapper, .weather, .m-cf-fejlec
+index.hu##section.normal-vezeto-blokk.femina-doboz.blokk, #pp-box, .postcontent
+index.hu##.newbox.container.new-mediafuture, .newbox.container.velvethu
+index.hu##._iph_brk_act._iph_brk, .njs-carousel.exchange, .zi-widget__wrapper
+index.hu##.container.blokk.indaplay, .ceginfokereso.rovarsearch_box
+index.hu##.app_promo_wrapper
+
+! Phoronix
+phoronix.com##article:has(.details:has-text(/Promotion|Highlights|Phoronix/))
+phoronix.com##aside.widget:has-text('Premium')
+phoronix.com##.after-article, .home_icons, #menuwrap
+||phoronix.com/assets/*
+||phoronix.com/android-chrome-192x192.png$image
+||phoronix.com/phxcms-css/star.png$image
+||phoronix.net/image.php?id=*_sml
+
+! Reddit
+old.reddit.com##body:style(margin:auto!important; max-width: 850px)
+old.reddit.com##img#header-img:style(max-height: 75px!important; max-width: 850px)
+old.reddit.com##.panestack-title:style(margin: 10px 10px 0px 10px!important)
+old.reddit.com##.selftext, .crosspost, .unvoted.midcol, .rank, .rounded.footer
+old.reddit.com##.video.hide-when-pinned, .listingsignupbar.infobar
+old.reddit.com###sr-header-area, #header-bottom-right, #hsts_pixel
+old.reddit.com##.may-blank.self.invisible-when-pinned.thumbnail
+old.reddit.com##.side, .commentsignupbar.infobar
+old.reddit.com##.seo-comments-recommendations.spacer, #bottom-comments, .spacer.seo-comments
+||redditstatic.com/desktop2x/img/favicon/manifest.json
+||redditstatic.com/sprite-reddit*.png$image
+||redditstatic.com/*.css
+||reddit.com/static/pixel.png$image
+||a.thumbs.redditmedia.com/*.css
+||b.thumbs.redditmedia.com/*.css
+@@redditstatic.com/reddit*.css
+@@redditstatic.com/crosspost-preview*.css
+@@redditstatic.com/video*.css
+
+! misskey
+movsw.0x0.st##body:style(margin:auto!important; max-width: 1000px)
+movsw.0x0.st##.banner-container:style(height: 75px!important)
+movsw.0x0.st##.header.sqxihjet, .tabs.fdidabkb, ._block.caution
+movsw.0x0.st##div.fields:nth-of-type(6), .wide.ftskorzw > .sub
+movsw.0x0.st##.banner, .banner.rwqkcmrc, .side, ._gap.contents
+movsw.0x0.st##.narrow, .status, .system.fields, .fdidabkb
+movsw.0x0.st##.description, .warn._block.caution
+movsw.0x0.st##.main._block > .avatar.square._noSelect.eiwwqkts
+movsw.0x0.st##.banner-container, .actions > ._button._buttonIcon
+||movsw.0x0.st/files/ec4fd5c4-725e-4bb3-b584-7c84ab6c232e
+
+! Instagram
+instagram.com##div._acnb:style(background:#0095F6!important; height: 10px!important; width: 10px!important)
+instagram.com##+js(json-prune, data.xdt_api__v1__discover__chaining.users.*)
+instagram.com##+js(set, document.title, false)
+
+! Instagram video controls
+instagram.com##+js(set-attr, video, controls)
+instagram.com##video:style(z-index: 9999 !important; position: relative !important;)
+instagram.com##div[role="button"]:has(> div > video)
+
+! Google login popup 3rd party sites
+||accounts.google.com/gsi/iframe/select?client_id=*.apps.googleusercontent.com
+
+! Redirects
+/^https:\/\/x\.com\/(.*)/$doc,to=x.com,uritransform=//https:\/\/nitter.net\/$1/
+||youtube.com/shorts/*$uritransform=/shorts\/([^\/?&]+)/watch?v=$1/
+||www.reddit.com*$uritransform=/www([^\/?&]+)/old$1/
+
+! Amazon
+amazon.de##.nav-flyout.nav-coreFlyout.glow-toaster-slot-default, #desktop-dp-ilm_feature_div_01

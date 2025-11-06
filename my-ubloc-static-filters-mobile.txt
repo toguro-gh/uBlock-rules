@@ -28,6 +28,7 @@ index.hu##.app_promo_wrapper
 
 ! Phoronix
 phoronix.com##article:has(.details:has-text(/Promotion|Highlights|Phoronix/))
+phoronix.com##article.important header a::before:style(content:""!important; padding: 0!important)
 phoronix.com##aside.widget:has-text('Premium')
 phoronix.com##.after-article, .home_icons, #menuwrap, #sharebar
 ||phoronix.com/assets/*
@@ -82,5 +83,6 @@ instagram.com##div[role="button"]:has(> div > video)
 
 ! Amazon
 amazon.de##.nav-flyout.nav-coreFlyout.glow-toaster-slot-default, #desktop-dp-ilm_feature_div_01
+
 
 

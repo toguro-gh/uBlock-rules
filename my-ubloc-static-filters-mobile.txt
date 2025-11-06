@@ -1,5 +1,5 @@
 ! Title: Mobile list for Firefox
-! Last modified: 2025-11-06 20:45
+! Last modified: 2025-11-06 21:00
 ! Homepage: https://github.com/toguro-gh/uBlock-rules
 ! License: https://creativecommons.org/publicdomain/zero/1.0/legalcode.en
 
@@ -28,7 +28,7 @@ index.hu##.app_promo_wrapper
 
 ! Phoronix
 phoronix.com##article:has(.details:has-text(/Promotion|Highlights|Phoronix/))
-phoronix.com##article.important header a::before:style(content:""!important; padding: 0!important)
+phoronix.com##article.important header a::before:style(content:""!important; padding: 0!important; margin-right: 0px!important)
 phoronix.com##aside.widget:has-text('Premium')
 phoronix.com##.after-article, .home_icons, #menuwrap, #sharebar
 ||phoronix.com/assets/*
@@ -83,6 +83,7 @@ instagram.com##div[role="button"]:has(> div > video)
 
 ! Amazon
 amazon.de##.nav-flyout.nav-coreFlyout.glow-toaster-slot-default, #desktop-dp-ilm_feature_div_01
+
 
 
 

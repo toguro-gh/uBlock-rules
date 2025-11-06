@@ -1,5 +1,5 @@
 ! Title: My static filters
-! Last modified: 2025-11-06 20:25
+! Last modified: 2025-11-06 21:00
 ! Homepage: https://github.com/toguro-gh/uBlock-rules
 ! License: https://creativecommons.org/publicdomain/zero/1.0/legalcode.en
 
@@ -101,7 +101,7 @@ askubuntu.com,superuser.com,serverfault.com,unix.stackexchange.com,stackoverflow
 
 ! Phoronix
 phoronix.com##article:has(.details:has-text(/Promotion|Highlights|Phoronix/))
-phoronix.com##article.important header a::before:style(content:""!important; padding: 0!important)
+phoronix.com##article.important header a::before:style(content:""!important; padding: 0!important; margin-right: 0px!important)
 phoronix.com##aside.widget:has-text('Premium')
 phoronix.com##.after-article, .home_icons, #menuwrap
 ||phoronix.com/assets/*

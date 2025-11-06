@@ -101,6 +101,7 @@ askubuntu.com,superuser.com,serverfault.com,unix.stackexchange.com,stackoverflow
 
 ! Phoronix
 phoronix.com##article:has(.details:has-text(/Promotion|Highlights|Phoronix/))
+phoronix.com##article.important header a::before:style(content:""!important; padding: 0!important)
 phoronix.com##aside.widget:has-text('Premium')
 phoronix.com##.after-article, .home_icons, #menuwrap
 ||phoronix.com/assets/*

@@ -1,10 +1,7 @@
 ! Title: Mobile list for Firefox
-! Last modified: 2025-11-06 20:25
+! Last modified: 2025-11-06 20:45
 ! Homepage: https://github.com/toguro-gh/uBlock-rules
 ! License: https://creativecommons.org/publicdomain/zero/1.0/legalcode.en
-
-! Other
-pornhub.com##+js(set-cookie, accessAgeDisclaimerPH, 2)
 
 ! HUP
 hup.hu##body:style(margin:auto!important; max-width: 1050px!important)
@@ -32,7 +29,7 @@ index.hu##.app_promo_wrapper
 ! Phoronix
 phoronix.com##article:has(.details:has-text(/Promotion|Highlights|Phoronix/))
 phoronix.com##aside.widget:has-text('Premium')
-phoronix.com##.after-article, .home_icons, #menuwrap
+phoronix.com##.after-article, .home_icons, #menuwrap, #sharebar
 ||phoronix.com/assets/*
 ||phoronix.com/android-chrome-192x192.png$image
 ||phoronix.com/phxcms-css/star.png$image
@@ -83,11 +80,7 @@ instagram.com##div[role="button"]:has(> div > video)
 ! Google login popup 3rd party sites
 ||accounts.google.com/gsi/iframe/select?client_id=*.apps.googleusercontent.com
 
-! Redirects
-/^https:\/\/x\.com\/(.*)/$doc,to=x.com,uritransform=//https:\/\/nitter.net\/$1/
-||youtube.com/shorts/*$uritransform=/shorts\/([^\/?&]+)/watch?v=$1/
-||www.reddit.com*$uritransform=/www([^\/?&]+)/old$1/
-
 ! Amazon
 amazon.de##.nav-flyout.nav-coreFlyout.glow-toaster-slot-default, #desktop-dp-ilm_feature_div_01
+
 

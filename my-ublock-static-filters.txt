@@ -1,43 +1,22 @@
 ! To test filter (example)
 !google.*##.oIk2Cb:style(opacity: .4; outline: 5px solid red)
 
-! Bloghu
+! Blog.hu
 blog.hu##.bloghu-controls
-||m*.hu/assets/frontend/img/load_nszurke.gif
 aszodiattila.blog.hu##header
-talospace.com##.has-image.hero-image
-
-! URL
-##.js-stickyFooter.u-xs-paddingRight10.u-xs-paddingLeft10.u-zIndexMetabar.u-paddingBottom10.u-paddingTop10.u-borderBox.u-boxShadowTop.u-backgroundWhite.u-width100pct.u-bottom0.u-fixed
-##.u-xs-sizeFullViewportWidth.u-backgroundTransparentWhiteDarkest.u-fixed.u-boxShadow4px12pxBlackLightest.js-metabar.u-clearfix.metabar
+||m*.hu/assets/frontend/img/load_nszurke.gif
 
 ! Facebook
-||facebook.com/security/hsts-pixel.gif*
-||messenger.com/security/hsts-pixel.gif*
+||facebook.com/security/hsts-pixel.gif$document
+||messenger.com/security/hsts-pixel.gif$document
 ||facebook.com^$subdocument,domain=~facebook.com
 
 ! Other
 pornhub.com##+js(set-cookie, accessAgeDisclaimerPH, 2)
-adsrvmedia.adk2.co/*
-marc.info/style.css
-bing.com###ilp_m
-*coinhive.min.js
-tinypic.com
-
-! Nemtom
-reddit||facebook.com^$subdocument,domain=~facebook.com
 
 ! Disable Service Workers
 !||$csp=worker-src 'none'
 !||$csp=worker-src 'none',domain=~facebook.com|~misskey.bubbletea.dev|~yewtu.be|~messenger.com
-
-! Google
-googletagmanager.com
-googletagservices.com
-google.com/images/cleardot.gif
-google.com/jsapi?autoload=%7B%22modules%22%3A%5B%7B%22name%22%3A%22ads%22%2C%22version%22%3A%221%22%2C%22callback%22%3A%22(function()%7B%7D)%22%2C%22packages%22%3A%5B%22content%22%5D%7D%5D%7D
-google.com/js/bg/dfD9zXZWxFiDhYhWq7JGeIab03YqAOfkkE7CNMbfLXw.js
-gstatic.com/chat/hangouts/bg/*.jpg
 
 ! Google Translate
 !translate.google.com##body:style(margin:auto!important;max-width:850px)
@@ -60,14 +39,6 @@ fedoramagazine.org##.comments:style(margin-left: 0px!important)
 fedoramagazine.org##comments, .post-inner:style(padding-left: 0px!important)
 fedoramagazine.org##div.default.text.codecolorer-container:style(width:auto!important)
 
-! disqus
-disqus.com
-
-! GitHub
-github.com##.rounded-1.mb-4.text-center.p-4.signup-prompt, .AnimatedEllipsis
-||github.githubassets.com/images/spinners/octocat-spinner-32-EAF2F5.gif
-||assets-cdn.github.com/images/modules/site/site-signup-prompt.png
-
 ! HUP
 hup.hu##body:style(margin:auto!important; max-width: 1050px!important)
 hup.hu##.layout-content:style(margin:auto!important; width: 100%!important)
@@ -78,17 +49,32 @@ hup.hu##a:has-text(/\[POL\]/i):upward(2)
 ||hup.hu/images/*
 
 ! Index.hu
-index.hu##div.cimlap-cikkgyujto:style(width: 100% !important)
-index.hu##div.goal, div.esport1, div.greendex, .legfrissebb_wrapper
-index.hu##section.porthu-doboz-new, section.bloghu, div.pp-hasab
-index.hu##div.kisallatos, div.betonepodcast, div.femina, div.velvet
-index.hu##section.welove, section.blokk_budapest, section.divany-doboz
-index.hu##section.blokk_nezzen-bele, .newbox.container.welovehu, .aisummit_index
-index.hu##.idojaras.showstopper,.legnezettebb_wrapper, .weather, .m-cf-fejlec
-index.hu##section.normal-vezeto-blokk.femina-doboz.blokk, #pp-box, .postcontent
-index.hu##.newbox.container.new-mediafuture, .newbox.container.velvethu
-index.hu##._iph_brk_act._iph_brk, .njs-carousel.exchange, .zi-widget__wrapper
-index.hu##.container.blokk.indaplay, .ceginfokereso.rovarsearch_box
+index.hu##div.cimlap-cikkgyujto:style(width: 100% !important;)
+index.hu##.cikk-cimkek:style(margin-top:5px!important)
+index.hu##.index-header:style(box-shadow:inset 0 0px!important)
+index.hu##.index-header-wrapper:style(margin-bottom:15px!important)
+index.hu##.article-container:has(.cikkcim:has-text(/szoboszlai|pride/i))
+index.hu##.active.c-content-pager_button-down,.aisummit_index,.bekezdes_utan.linkpreview
+index.hu##body > .container.index2, .border.container.bank360, .c-content-pager_button-down
+index.hu##.c-content-pager_button-up, .cikk-bottom-text-ad, #cikkvegi_static_promo, #index-rovatok
+index.hu##.cimlap-blokk-index_divany.divany-header.container.divany-doboz.blokk, .zi-widget__wrapper
+index.hu##.cimlap-blokk-index_divany.normal-vezeto.normal-vezeto-blokk.divany-doboz.blokk
+index.hu##.cimlap-blokk-index_porthu.normal-vezeto.normal-vezeto-blokk.porthu-doboz-new.container.blokk
+index.hu##.cimlap-blokk-index_porthu.porthu-header-new.porthu-doboz-new.container.blokk
+index.hu##.c-index2-pager_link, .container.blokk.indaplay, .container.border.femina, div.betonepodcast
+index.hu##.container.border.otthonterkep2, .container.border.portfolio, div.bekezdes_utan.linkpreview:nth-of-type(5)
+index.hu##.container.border.sobors > .cimlap-blokk-index_femina.normal-vezeto.normal-vezeto-blokk.femina-doboz.blokk
+index.hu##.container.napihu, .divany-footer.normal-vezeto-blokk.divany-doboz.blokk, .cimlap-blokk-index.szponzoralt-blokk
+index.hu##div.esport1, div.femina, div.goal, div.greendex, div.kisallatos, div.pp-hasab
+index.hu##div.velvet, .has-cntdown.no-sponsor.aisummit2025.info-stripe, .idojaras.showstopper
+index.hu###indavideo, .index-blog-header.container, ._iph_brk_act._iph_brk,.legfrissebb_wrapper
+index.hu##.legnezettebb_wrapper, .m-automatic-file-snippet,.m-cf-fejlec, .newbox.container.economxhu
+index.hu##.newbox.container.new-mediafuture, .newbox.container.velvethu, .newbox.container.welovehu
+index.hu##.njs-carousel.exchange, .nm_thanks--base.nm_thanks, .nm_thanks--yellow.nm_thanks
+index.hu##.p1, .postcontent, #pp-box, section.bloghu,section.blokk_budapest, section.blokk_nezzen-bele
+index.hu##section.divany-doboz, section.normal-vezeto-blokk.femina-doboz.blokk, section.porthu-doboz-new
+index.hu##section.welove, .totalcar-joautok-doboz, .tulelokeszlet.border.container, .weather
+index.hu##.szerzo-kep, ._iph_follow.btn-pass, .cikk-cover-v1.cikk-cover.container
 
 ! nCore
 ncore.pro##.infocsik, .commentbox_all
@@ -98,10 +84,6 @@ ncore.pro###hessteg, #details2, div.torrent_leiras:nth-of-type(14)
 
 ! Grumpy
 grumpy.website##.post_video_overlay-paused.post_video_overlay
-
-! Gabucino
-gabucino.hu##body:style(max-width:750px; margin: auto!important)
-gabucino.hu##img:style(height: auto;max-width: 100%)
 
 ! skarnet
 skarnet.org##body:style(max-width:750px; margin: auto!important)
@@ -113,23 +95,12 @@ askubuntu.com,superuser.com,serverfault.com,unix.stackexchange.com,stackoverflow
 askubuntu.com,superuser.com,serverfault.com,unix.stackexchange.com,stackoverflow.com,tex.stackexchange.com,webapps.stackexchange.com,video.stackexchange.com,ux.stackexchange.com##header.s-topbar.ps-fixed.t0.l0.js-top-bar:style(margin-top: 0px!important)
 
 ! Phoronix
-phoronix.com##article:has(.details:has-text(/Promotion|Highlights/))
-phoronix.com##.restore.notice, #social, #menuwrap, #breadcrumbs, #notices
-phoronix.com##.icon-angle-circled-down.menunolink, .js-top-menu-user.b-top-menu__background
-phoronix.com##.after-article, .highpos.h-margin-top-m.b-meter, #widget_20 > .h-clearfix.widget-header
-phoronix.com##div.h-clearfix.no-columns.l-row.canvas-layout-row:nth-of-type(2)
-phoronix.com##aside.widget:nth-of-type(7), aside.widget:nth-of-type(4)
-phoronix.com##.h-margin-horiz-xl.h-padding-bottom-m.h-clear.h-hide--on-preview.b-post__footer
-phoronix.com##.b-userinfo__details > .h-margin-top-xl.b-userinfo__additional-info-block
-phoronix.com###footer-tabbar, #footer-copyright, #header, #channel-subtabbar
-phoronix.com##.h-margin-bottom-l.b-avatar--thread.b-avatar--m.b-avatar
-phoronix.com##.b-avatar--thread.b-avatar--m.b-avatar.medium.avatar
+phoronix.com##article:has(.details:has-text(/Promotion|Highlights|Phoronix/))
+phoronix.com##aside.widget:has-text('Premium')
+phoronix.com##.after-article, .home_icons, #menuwrap
 ||phoronix.com/assets/*
-||phoronix.com/favicon.ico$image
-||phoronix.com/favicon-*.png$image
-||phoronix.com/phxcms7-css/shadowbox.css$document
-||phoronix.com/forums/core/images/default/default_avatar_medium.png$image
-||phoronix.com/forums/*^$document
+||phoronix.com/android-chrome-192x192.png$image
+||phoronix.com/phxcms-css/star.png$image
 ||phoronix.net/image.php?id=*_sml
 
 ! Reddit
@@ -169,12 +140,6 @@ airlied.blogspot.com##.sidebar-invisible.container.sidebar-container
 blog.netbsd.org##.comments-form
 blogs.gnome.org##.comment-respond, #site-generator
 ||blogs.gnome.org/uraeus/wp-content/themes/twentyeleven/images/headers/*$image
-
-! redhat
-redhat.com###redhat-cookie-privacy-banner
-redhat.com##figure > .image__field-media-image.blazy > .field__item > .media--image.media--loading.media--blazy.media
-redhat.com##div.section:nth-of-type(4) > .container > div > .block > .views-element-container
-redhat.com##.text-center.p-3.my-5.cta--.cta--red-on-black.cta.block--cta.block
 
 ! YouTube
 youtube.com$csp=worker-src 'none'
@@ -253,13 +218,12 @@ movsw.0x0.st##.description, .warn._block.caution
 ||movsw.0x0.st/files/ec4fd5c4-725e-4bb3-b584-7c84ab6c232e
 
 ! hasznaltauto.hu
-hasznaltauto.hu##.fbshare, .ajanlodoboz.cimlap-kiemelt, .no-print.visible-lg.zone-container.local-content
-hasznaltauto.hu##.main-page-upper-featured-section.col-xs-28, .ad-view-garazs, tbody:nth-of-type(4)
-hasznaltauto.hu##.overflow-hidden.h-100.p-3.bg-gray-800.gap-3.d-none.flex-grow-0.flex-shrink-0.flex-column.d-xl-flex.full-screen-gallery__sidebar
-||asset.hasznaltautocdn.com/hasznaltauto.hu/assets/fa3fe6fb617c70825e9ddbd02d44a765/images/facebook_share_button.svg$image
-||asset.hasznaltautocdn.com/skeletor/images/banner_fallback/970x250.683271dd.png$image
-||hasznaltauto.medija.hu/new_test/images/local_content_banner.png$image
-||www.hasznaltauto.hu/ajanloframe/*$subdocument
+hasznaltauto.hu##.tabboccordion, .recommendation, .footer-united-platforms, .garazs-article, .col-md-6.col-12.d-print-none
+hasznaltauto.hu##.gap-3.flex-column.d-xl-flex.d-none.d-print-none, .border-white.border-top, .full-screen-gallery__sidebar
+hasznaltauto.hu###money-calculator, #shops-and-services, .p-3.gap-3.flex-column.d-flex > div > .d-print-none
+hasznaltauto.hu###billboard > .flex-column.d-flex.align-items-center.container-fluid, .col-lg-20.col-xs-28
+hasznaltauto.hu##.no-print.visible-lg.zone-container.local-content, .main-page-banner-container
+||hasznaltauto.hu/cimlap-kiemelt-belseje$subdocument
 
 ! Instagram
 instagram.com##div._acnb:style(background:#0095F6!important; height: 10px!important; width: 10px!important)
@@ -303,14 +267,7 @@ mastodon.social,chaos.social,floss.social,fosstodon.org,androiddev.social,social
 mastodon.social,chaos.social,floss.social,fosstodon.org,androiddev.social,social.gompa.me,ordinary.cafe,social.sineware.ca,hachyderm.io##.status--in-thread.status-reply.status-unlisted.status > .status__action-bar
 mastodon.social,chaos.social,floss.social,fosstodon.org,androiddev.social,social.gompa.me,ordinary.cafe,social.sineware.ca,hachyderm.io##.columns-area__panels__main:style(margin:auto!important; max-width: 1000px!important)
 
-! ImdB
-imdb.com##.Etrnh.sc-8b4a7eec-1.ipc-page-background--baseAlt.ipc-page-background
-imdb.com##.footer__logo.imdb-footer__logo, .footer__sign-in
-imdb.com##.hblEUO.sc-71347aa5-0.ipc-page-section--baseAlt.ipc-page-section
-imdb.com##.imdb-header__watchlist-button.fClFUt.sc-196567ac-0
-imdb.com##.navbar__imdbpro.inTDGV.sc-5c0cfbcd-0, .nav__userMenu.iekFeW.sc-dc5b3027-0
-
-! blogs dreamwidth.org
+! dreamwidth.org blogs
 ||v2.dreamwidth.org/16479769/3892031$image
 hansdegoede.dreamwidth.org,mjg59.dreamwidth.org###lj_controlstrip, .footer, #secondary, .module-section-two > .inner, .bottomcomment, #pagetitle
 hansdegoede.dreamwidth.org,mjg59.dreamwidth.org###canvas:style(margin:auto!important; max-width: 1000px!important)
@@ -342,9 +299,3 @@ imgur.com##.Gallery-contentWrapper:others()
 blogs.oracle.com##.u10w1, .rw-pattern-load.social, #u18skip2
 blogs.oracle.com##p:style(hyphens:auto; text-align: justify)
 
-! fedoramagazine.org
-fedoramagazine.org##.related-posts, .social-menu
-fedoramagazine.org##a:style(word-wrap: break-word)
-fedoramagazine.org##.comments:style(margin-left: 0px!important)
-fedoramagazine.org##comments, .post-inner:style(padding-left: 0px!important)
-fedoramagazine.org##div.default.text.codecolorer-container:style(width:auto!important)

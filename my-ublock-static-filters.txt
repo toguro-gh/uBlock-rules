@@ -1,3 +1,8 @@
+! Title: My static filters
+! Last modified: 2025-11-06 20:25
+! Homepage: https://github.com/toguro-gh/uBlock-rules
+! License: https://creativecommons.org/publicdomain/zero/1.0/legalcode.en
+
 ! To test filter (example)
 !google.*##.oIk2Cb:style(opacity: .4; outline: 5px solid red)
 

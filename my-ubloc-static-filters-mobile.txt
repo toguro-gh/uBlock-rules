@@ -1,30 +1,32 @@
 ! Title: Mobile list for Firefox
-! Last modified: 2025-11-06 21:00
+! Last modified: 2025-11-07 10:15
 ! Homepage: https://github.com/toguro-gh/uBlock-rules
 ! License: https://creativecommons.org/publicdomain/zero/1.0/legalcode.en
 
 ! HUP
-hup.hu##body:style(margin:auto!important; max-width: 1050px!important)
 hup.hu##.layout-content:style(margin:auto!important; width: 100%!important)
 hup.hu##img:style(display:block; margin-left:auto; margin-right:auto)
+hup.hu##iframe:style(max-width:400px!important; max-height:200px!important)
+hup.hu##video:style(width:400px!important)
 hup.hu##.node--view-mode-teaser.node--sticky.node--promoted.node, .feed-icons
 hup.hu###block-hupforumblokk, .layout-sidebar-second, .layout-sidebar-first
-hup.hu##a:has-text(/\[POL\]/i):upward(2)
+hup.hu##.layout-container > footer
 ||hup.hu/images/*
 
 ! Index.hu
-index.hu##div.cimlap-cikkgyujto:style(width: 100% !important)
-index.hu##div.goal, div.esport1, div.greendex, .legfrissebb_wrapper
-index.hu##section.porthu-doboz-new, section.bloghu, div.pp-hasab
-index.hu##div.kisallatos, div.betonepodcast, div.femina, div.velvet
-index.hu##section.welove, section.blokk_budapest, section.divany-doboz
-index.hu##section.blokk_nezzen-bele, .newbox.container.welovehu, .aisummit_index
-index.hu##.idojaras.showstopper,.legnezettebb_wrapper, .weather, .m-cf-fejlec
-index.hu##section.normal-vezeto-blokk.femina-doboz.blokk, #pp-box, .postcontent
-index.hu##.newbox.container.new-mediafuture, .newbox.container.velvethu
-index.hu##._iph_brk_act._iph_brk, .njs-carousel.exchange, .zi-widget__wrapper
-index.hu##.container.blokk.indaplay, .ceginfokereso.rovarsearch_box
-index.hu##.app_promo_wrapper
+index.hu##.index-header-wrapper:style(margin-top:-45px!important)
+index.hu##.m-cf-kiadvanylista, .exchange-ticker, .pp-hasab
+index.hu##.weatherajanlo_wrapper, .idojaras.showstopper
+index.hu##.m-cf-fejlec, .m-page-footer, .newbox, .femina
+index.hu##.porthu-doboz-new.container, .container.bloghu
+index.hu##.betonepodcast, .bcs-position-cimlap_femina_doboz
+index.hu##.mobile-open-btn, .divany-doboz.blokk, .kisallatos
+index.hu##.indaplay, .legnezettebb_wrapper, .legfrissebb_wrapper
+index.hu##.blokk:nth-of-type(4), .m-automatic-file-snippet
+index.hu##.cikk-cover, .btn-pass, .szerzo-kep, .megoszt
+index.hu##.app_promo_wrapper, .index-social-box,.social-follow
+index.hu##.m-automatic-file-snippet, .trending-topics
+index.hu##.embedded-video:remove()
 
 ! Phoronix
 phoronix.com##article:has(.details:has-text(/Promotion|Highlights|Phoronix/))
@@ -37,8 +39,6 @@ phoronix.com##.after-article, .home_icons, #menuwrap, #sharebar
 ||phoronix.net/image.php?id=*_sml
 
 ! Reddit
-old.reddit.com##body:style(margin:auto!important; max-width: 850px)
-old.reddit.com##img#header-img:style(max-height: 75px!important; max-width: 850px)
 old.reddit.com##.panestack-title:style(margin: 10px 10px 0px 10px!important)
 old.reddit.com##.selftext, .crosspost, .unvoted.midcol, .rank, .rounded.footer
 old.reddit.com##.video.hide-when-pinned, .listingsignupbar.infobar
@@ -57,8 +57,6 @@ old.reddit.com##.seo-comments-recommendations.spacer, #bottom-comments, .spacer.
 @@redditstatic.com/video*.css
 
 ! misskey
-movsw.0x0.st##body:style(margin:auto!important; max-width: 1000px)
-movsw.0x0.st##.banner-container:style(height: 75px!important)
 movsw.0x0.st##.header.sqxihjet, .tabs.fdidabkb, ._block.caution
 movsw.0x0.st##div.fields:nth-of-type(6), .wide.ftskorzw > .sub
 movsw.0x0.st##.banner, .banner.rwqkcmrc, .side, ._gap.contents
@@ -83,6 +81,7 @@ instagram.com##div[role="button"]:has(> div > video)
 
 ! Amazon
 amazon.de##.nav-flyout.nav-coreFlyout.glow-toaster-slot-default, #desktop-dp-ilm_feature_div_01
+
 
 
 

@@ -103,7 +103,7 @@ askubuntu.com,superuser.com,serverfault.com,unix.stackexchange.com,stackoverflow
 phoronix.com##article:has(.details:has-text(/Promotion|Highlights|Phoronix/))
 phoronix.com##article.important header a::before:style(content:""!important; padding: 0!important; margin-right: 0px!important)
 phoronix.com##aside.widget:has-text('Premium')
-phoronix.com##.after-article, .home_icons, #menuwrap
+phoronix.com##.after-article, .home_icons, #menuwrap, #sharebar, #social
 ||phoronix.com/assets/*
 ||phoronix.com/android-chrome-192x192.png$image
 ||phoronix.com/phxcms-css/star.png$image

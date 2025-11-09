@@ -39,6 +39,8 @@ phoronix.com##.after-article, .home_icons, #menuwrap, #sharebar
 ||phoronix.net/image.php?id=*_sml
 
 ! Reddit
+old.reddit.com##.md, body:style(background-color: #181a1b !important)
+old.reddit.com##.md, .title:style(color: #e8e6e3 !important)
 old.reddit.com##.panestack-title:style(margin: 10px 10px 0px 10px!important)
 old.reddit.com##.selftext, .crosspost, .unvoted.midcol, .rank, .rounded.footer
 old.reddit.com##.video.hide-when-pinned, .listingsignupbar.infobar
@@ -81,6 +83,7 @@ instagram.com##div[role="button"]:has(> div > video)
 
 ! Amazon
 amazon.de##.nav-flyout.nav-coreFlyout.glow-toaster-slot-default, #desktop-dp-ilm_feature_div_01
+
 
 
 

@@ -41,12 +41,14 @@ phoronix.com##.after-article, .home_icons, #menuwrap, #sharebar
 ! Reddit
 old.reddit.com##.md, body:style(background-color: #181a1b !important)
 old.reddit.com##.md, .title:style(color: #e8e6e3 !important)
+old.reddit.com###header-bottom-left, .buttons.flat-list:style(font-size: 300%!important)
+old.reddit.com##.domain:style(font-size: 200%!important)
 old.reddit.com##.panestack-title:style(margin: 10px 10px 0px 10px!important)
 old.reddit.com##.selftext, .crosspost, .unvoted.midcol, .rank, .rounded.footer
 old.reddit.com##.video.hide-when-pinned, .listingsignupbar.infobar
 old.reddit.com###sr-header-area, #header-bottom-right, #hsts_pixel
 old.reddit.com##.may-blank.self.invisible-when-pinned.thumbnail
-old.reddit.com##.side, .commentsignupbar.infobar
+old.reddit.com##.side, .commentsignupbar.infobar, .footer-parent
 old.reddit.com##.seo-comments-recommendations.spacer, #bottom-comments, .spacer.seo-comments
 ||redditstatic.com/desktop2x/img/favicon/manifest.json
 ||redditstatic.com/sprite-reddit*.png$image
@@ -83,6 +85,7 @@ instagram.com##div[role="button"]:has(> div > video)
 
 ! Amazon
 amazon.de##.nav-flyout.nav-coreFlyout.glow-toaster-slot-default, #desktop-dp-ilm_feature_div_01
+
 
 
 

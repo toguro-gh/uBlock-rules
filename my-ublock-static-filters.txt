@@ -47,7 +47,7 @@ fedoramagazine.org##div.default.text.codecolorer-container:style(width:auto!impo
 ! HUP
 hup.hu##body:style(margin:auto!important; max-width: 1050px!important)
 hup.hu##.layout-content:style(margin:auto!important; width: 100%!important)
-hup.hu##img:style(display:block; margin-left:auto; margin-right:auto)
+hup.hu##img:style(display:block; margin-left:auto; margin-right:auto; height: auto!important)
 hup.hu##.node--view-mode-teaser.node--sticky.node--promoted.node, .feed-icons
 hup.hu###block-hupforumblokk, .layout-sidebar-second, .layout-sidebar-first
 hup.hu##a:has-text(/\[POL\]/i):upward(2)

@@ -1,8 +1,3 @@
-! Title: My static filters
-! Last modified: 2025-11-06 21:00
-! Homepage: https://github.com/toguro-gh/uBlock-rules
-! License: https://creativecommons.org/publicdomain/zero/1.0/legalcode.en
-
 ! To test filter (example)
 !google.*##.oIk2Cb:style(opacity: .4; outline: 5px solid red)
 
@@ -17,7 +12,7 @@ aszodiattila.blog.hu##header
 ||facebook.com^$subdocument,domain=~facebook.com
 
 ! Other
-pornhub.com##+js(set-cookie, accessAgeDisclaimerPH, 2)
+! pornhub.com##+js(set-cookie, accessAgeDisclaimerPH, 2)
 
 ! Disable Service Workers
 !||$csp=worker-src 'none'
@@ -100,7 +95,7 @@ askubuntu.com,superuser.com,serverfault.com,unix.stackexchange.com,stackoverflow
 askubuntu.com,superuser.com,serverfault.com,unix.stackexchange.com,stackoverflow.com,tex.stackexchange.com,webapps.stackexchange.com,video.stackexchange.com,ux.stackexchange.com##header.s-topbar.ps-fixed.t0.l0.js-top-bar:style(margin-top: 0px!important)
 
 ! Phoronix
-phoronix.com##article:has(.details:has-text(/Promotion|Highlights|Phoronix/))
+phoronix.com##article:has(.details:has-text(/Promotion|Highlights|Phoronix|Premium/))
 phoronix.com##article.important header a::before:style(content:""!important; padding: 0!important; margin-right: 0px!important)
 phoronix.com##aside.widget:has-text('Premium')
 phoronix.com##.after-article, .home_icons, #menuwrap, #sharebar, #social
@@ -110,6 +105,12 @@ phoronix.com##.after-article, .home_icons, #menuwrap, #sharebar, #social
 ||phoronix.net/image.php?id=*_sml
 
 ! Reddit
+! Dark theme, font sze fix for mobile
+! old.reddit.com##.md, body:style(background-color: #181a1b !important)
+! old.reddit.com##.md, .title:style(color: #e8e6e3 !important)
+! old.reddit.com##.footer-parent
+! old.reddit.com###header-bottom-left, .buttons.flat-list:style(font-size: 300%!important)
+! old.reddit.com##.domain:style(font-size: 200%!important)
 old.reddit.com##body:style(margin:auto!important; max-width: 850px)
 old.reddit.com##img#header-img:style(max-height: 75px!important; max-width: 850px)
 old.reddit.com##.panestack-title:style(margin: 10px 10px 0px 10px!important)
@@ -252,11 +253,11 @@ nirsoft.net##body:style(margin:auto!important; max-width: 1050px)
 
 ! reflexio.linuxuser.hu
 ||reflexio.linuxuser.hu/wp-content/uploads/2023/06/cropped-pexels-luis-del-rio-15286-1.jpg$image
-reflexio.linuxuser.hu###block-3, #block-5, #masthead > .content-wrap, .comment-form, .comment-reply-title:remove()
+reflexio.linuxuser.hu###block-3, #block-5, #masthead > .content-wrap, .blogpost-button, .comment-form, .comment-reply-title:remove()
 
 ! linuxuser.hu
 ||linuxuser.hu/wp-content/uploads/2023/06/cropped-pexels-cottonbro-studio-8721342-scaled-1.jpg$image
-linuxuser.hu###masthead > .content-wrap, #archives-3, .must-log-in, .comment-reply-title:remove()
+linuxuser.hu###masthead > .content-wrap, #archives-3, .must-log-in, .blogpost-button, .comment-reply-title:remove()
 
 ! subvito
 subvito.eu##img.logo:style(max-width: 150px !important)
@@ -267,11 +268,11 @@ subvito.eu##.wpd-form-wrap, .random-page-button, .header > footer, .entry-header
 ||accounts.google.com/gsi/iframe/select?client_id=*.apps.googleusercontent.com
 
 ! Mastodon
-mastodon.social,chaos.social,floss.social,fosstodon.org,androiddev.social,social.gompa.me,ordinary.cafe,social.sineware.ca,hachyderm.io##.avatar, dl, .server-banner, .column-back-button, .column-header__buttons
-mastodon.social,chaos.social,floss.social,fosstodon.org,androiddev.social,social.gompa.me,ordinary.cafe,social.sineware.ca,hachyderm.io##.account__header__image, .account__header__tabs, .status__action-bar
-mastodon.social,chaos.social,floss.social,fosstodon.org,androiddev.social,social.gompa.me,ordinary.cafe,social.sineware.ca,hachyderm.io##.detailed-status__action-bar, .navigation-panel > .flex-spacer, .navigation-panel__menu
-mastodon.social,chaos.social,floss.social,fosstodon.org,androiddev.social,social.gompa.me,ordinary.cafe,social.sineware.ca,hachyderm.io##.status--in-thread.status-reply.status-unlisted.status > .status__action-bar
-mastodon.social,chaos.social,floss.social,fosstodon.org,androiddev.social,social.gompa.me,ordinary.cafe,social.sineware.ca,hachyderm.io##.columns-area__panels__main:style(margin:auto!important; max-width: 1000px!important)
+mastodon.social,chaos.social,floss.social,fosstodon.org,androiddev.social,social.gompa.me,ordinary.cafe,social.sineware.ca,hachyderm.io,mastodon.online##.avatar, dl, .server-banner, .column-back-button, .column-header__buttons
+mastodon.social,chaos.social,floss.social,fosstodon.org,androiddev.social,social.gompa.me,ordinary.cafe,social.sineware.ca,hachyderm.io,mastodon.online##.account__header__image, .account__header__tabs, .status__action-bar
+mastodon.social,chaos.social,floss.social,fosstodon.org,androiddev.social,social.gompa.me,ordinary.cafe,social.sineware.ca,hachyderm.io,mastodon.online##.detailed-status__action-bar, .navigation-panel > .flex-spacer, .navigation-panel__menu
+mastodon.social,chaos.social,floss.social,fosstodon.org,androiddev.social,social.gompa.me,ordinary.cafe,social.sineware.ca,hachyderm.io,mastodon.online##.status--in-thread.status-reply.status-unlisted.status > .status__action-bar
+mastodon.social,chaos.social,floss.social,fosstodon.org,androiddev.social,social.gompa.me,ordinary.cafe,social.sineware.ca,hachyderm.io,mastodon.online##.columns-area__panels__main:style(margin:auto!important; max-width: 1000px!important)
 
 ! dreamwidth.org blogs
 ||v2.dreamwidth.org/16479769/3892031$image
@@ -304,4 +305,11 @@ imgur.com##.Gallery-contentWrapper:others()
 ||blogs.oracle.com/linux/wp-content/themes/oracleredwoodblog/assets/images/default_avatar.jpg$image
 blogs.oracle.com##.u10w1, .rw-pattern-load.social, #u18skip2
 blogs.oracle.com##p:style(hyphens:auto; text-align: justify)
+
+! magyarepitok.hu
+magyarepitok.hu##.logo:style(height: 50px!important)
+magyarepitok.hu##.head-info.mq-9-col-5.col-10 > .col-10
+magyarepitok.hu##div.row.bless.category-section, .ion-ios-cart.srch-btn
+magyarepitok.hu##div.row.default.category-section:has-text(/hírlevél/i)
+magyarepitok.hu##.footer-cnt:remove()
 

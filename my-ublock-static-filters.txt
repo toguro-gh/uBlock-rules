@@ -1,5 +1,5 @@
 ! Title: My static filters
-! Last modified: 2025-11-24 17:00
+! Last modified: 2025-11-28 20:00
 ! Homepage: https://github.com/toguro-gh/uBlock-rules
 ! License: https://creativecommons.org/publicdomain/zero/1.0/legalcode.en
 
@@ -102,8 +102,9 @@ askubuntu.com,superuser.com,serverfault.com,unix.stackexchange.com,stackoverflow
 ! Phoronix
 phoronix.com##article:has(.details:has-text(/Promotion|Highlights|Phoronix|Premium/))
 phoronix.com##article.important header a::before:style(content:""!important; padding: 0!important; margin-right: 0px!important)
-phoronix.com##aside.widget:has-text('Premium')
-phoronix.com##.after-article, .home_icons, #menuwrap, #sharebar, #social
+phoronix.com##aside.widget:has-text(/Go Premium|Support Phoronix/)
+phoronix.com##p:has-text(/joining Phoronix Premium/)
+phoronix.com##.after-article, .home_icons, #menuwrap, #sharebar, #social, #footer
 ||phoronix.com/assets/*
 ||phoronix.com/android-chrome-192x192.png$image
 ||phoronix.com/phxcms-css/star.png$image
@@ -165,7 +166,8 @@ youtube.com###c4-player > .html5-video-container > .html5-main-video.video-strea
 youtube.com###ytd-player, #thumbnail, .ytp-preview, .ytp-tooltip-bg, yt-thumbnail-view-model:style( border-radius: 0px !important)
 youtube.com###description.ytd-watch-metadata:hover:style(background:var( --yt-spec-raised-background ) !important)
 !youtube.com##ytd-rich-grid-renderer:style(--ytd-rich-grid-items-per-row: 4 !important)
-youtube.com##ytd-rich-item-renderer.ytd-rich-grid-renderer:has(.badge-style-type-members-only)
+! youtube.com##ytd-rich-item-renderer.ytd-rich-grid-renderer:has(.badge-style-type-members-only)
+youtube.com##ytd-rich-item-renderer.ytd-rich-grid-renderer:has(.yt-badge-shape--membership)
 youtube.com##ytd-rich-item-renderer.ytd-rich-grid-renderer:has(.yt-lockup-view-model--collection-stack-2)
 youtube.com##ytd-rich-item-renderer.ytd-rich-grid-renderer:has(span.ytd-video-meta-block.style-scope.inline-metadata-item:has-text("Premieres"))
 youtube.com##ytd-rich-item-renderer.ytd-rich-grid-renderer:has(.yt-badge-shape__text:has-text("Upcoming"))

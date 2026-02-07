@@ -1,5 +1,5 @@
 ! Title: My static filters
-! Last modified: 2025-11-28 20:00
+! Last modified: 2026-02-07 10:00
 ! Homepage: https://github.com/toguro-gh/uBlock-rules
 ! License: https://creativecommons.org/publicdomain/zero/1.0/legalcode.en
 
@@ -70,19 +70,21 @@ index.hu##.c-index2-pager_link, .container.blokk.indaplay, .container.border.fem
 index.hu##.container.border.otthonterkep2, .container.border.portfolio, div.bekezdes_utan.linkpreview:nth-of-type(5)
 index.hu##.container.border.sobors > .cimlap-blokk-index_femina.normal-vezeto.normal-vezeto-blokk.femina-doboz.blokk
 index.hu##.container.napihu, .divany-footer.normal-vezeto-blokk.divany-doboz.blokk, .cimlap-blokk-index.szponzoralt-blokk
-index.hu##div.esport1, div.femina, div.goal, div.greendex, div.kisallatos, div.pp-hasab
-index.hu##div.velvet, .has-cntdown.no-sponsor.aisummit2025.info-stripe, .idojaras.showstopper
+index.hu##div.esport1, div.femina, div.goal, div.greendex, div.kisallatos, div.pp-hasab, .social-stripe
+index.hu##div.velvet, .has-cntdown.no-sponsor.aisummit2025.info-stripe, .idojaras.showstopper, .newbox.container.bunteto
 index.hu###indavideo, .index-blog-header.container, ._iph_brk_act._iph_brk,.legfrissebb_wrapper
 index.hu##.legnezettebb_wrapper, .m-automatic-file-snippet,.m-cf-fejlec, .newbox.container.economxhu
 index.hu##.newbox.container.new-mediafuture, .newbox.container.velvethu, .newbox.container.welovehu
-index.hu##.njs-carousel.exchange, .nm_thanks--base.nm_thanks, .nm_thanks--yellow.nm_thanks
+index.hu##.njs-carousel.exchange, .nm_thanks--base.nm_thanks, .nm_thanks--yellow.nm_thanks, .newbox.container.weborvoshu
 index.hu##.p1, .postcontent, #pp-box, section.bloghu,section.blokk_budapest, section.blokk_nezzen-bele
 index.hu##section.divany-doboz, section.normal-vezeto-blokk.femina-doboz.blokk, section.porthu-doboz-new
 index.hu##section.welove, .totalcar-joautok-doboz, .tulelokeszlet.border.container, .weather
-index.hu##.szerzo-kep, ._iph_follow.btn-pass, .cikk-cover-v1.cikk-cover.container
+index.hu##.szerzo-kep, ._iph_follow.btn-pass, .cikk-cover-v1.cikk-cover.container, .small.facebook.social-follow
 
 ! nCore
-ncore.pro##.infocsik, .commentbox_all
+ncore.pro##.news_right2:style(width: auto!important)
+ncore.pro##.news_block_left:style(float: none!important; padding-right:none!important; width: auto!important)
+ncore.pro##.infocsik, .commentbox_all, .news_block_right
 ncore.pro##center:nth-of-type(1) > div, center:nth-of-type(2) > div
 ncore.pro###hessteg, #details2, div.torrent_leiras:nth-of-type(14)
 ||static.ncore.pro/static/js/fancybox/fancybox.css$document
@@ -118,7 +120,8 @@ phoronix.com##.after-article, .home_icons, #menuwrap, #sharebar, #social, #foote
 ! old.reddit.com###header-bottom-left, .buttons.flat-list:style(font-size: 300%!important)
 ! old.reddit.com##.domain:style(font-size: 200%!important)
 old.reddit.com##body:style(margin:auto!important; max-width: 850px)
-old.reddit.com##img#header-img:style(max-height: 75px!important; max-width: 850px)
+! old.reddit.com##img#header-img:style(max-height: 75px!important; max-width: 850px)
+old.reddit.com##img#header-img:style(max-height: 75px!important; width: auto!important)
 old.reddit.com##.panestack-title:style(margin: 10px 10px 0px 10px!important)
 old.reddit.com##.selftext, .crosspost, .unvoted.midcol, .rank, .rounded.footer
 old.reddit.com##.video.hide-when-pinned, .listingsignupbar.infobar
@@ -168,9 +171,10 @@ youtube.com###description.ytd-watch-metadata:hover:style(background:var( --yt-sp
 !youtube.com##ytd-rich-grid-renderer:style(--ytd-rich-grid-items-per-row: 4 !important)
 ! youtube.com##ytd-rich-item-renderer.ytd-rich-grid-renderer:has(.badge-style-type-members-only)
 youtube.com##ytd-rich-item-renderer.ytd-rich-grid-renderer:has(.yt-badge-shape--membership)
+youtube.com##.yt-lockup-view-model--flex-none.yt-lockup-view-model--rich-grid-legacy-margin:has-text("Members only")
 youtube.com##ytd-rich-item-renderer.ytd-rich-grid-renderer:has(.yt-lockup-view-model--collection-stack-2)
-youtube.com##ytd-rich-item-renderer.ytd-rich-grid-renderer:has(span.ytd-video-meta-block.style-scope.inline-metadata-item:has-text("Premieres"))
-youtube.com##ytd-rich-item-renderer.ytd-rich-grid-renderer:has(.yt-badge-shape__text:has-text("Upcoming"))
+! youtube.com##ytd-rich-item-renderer.ytd-rich-grid-renderer:has(span.ytd-video-meta-block.style-scope.inline-metadata-item:has-text("Premieres"))
+! youtube.com##ytd-rich-item-renderer.ytd-rich-grid-renderer:has(.yt-badge-shape__text:has-text("Upcoming"))
 youtube.com##.ytp-quality-menu .ytp-menuitem:has(.ytp-premium-label)
 youtube.com##ytd-search ytd-item-section-renderer>#contents>:is(:not(ytd-video-renderer,yt-showing-results-for-renderer,[icon-name="promo-full-height:EMPTY_SEARCH"]),ytd-video-renderer:has([aria-label="Shorts"])),ytd-secondary-search-container-renderer
 !youtube.com/watch##+js(set, ytInitialData, undefined)
@@ -241,8 +245,10 @@ hasznaltauto.hu##.no-print.visible-lg.zone-container.local-content, .main-page-b
 
 ! Instagram
 instagram.com##div._acnb:style(background:#0095F6!important; height: 10px!important; width: 10px!important)
+! instagram.com##+js(json-prune-xhr-response, data.xdt_api__v1__feed__timeline__connection.edges.[-].node.ad, , propsToMatch, url:/graphql/query)
 instagram.com##+js(json-prune, data.xdt_api__v1__discover__chaining.users.*)
 instagram.com##+js(set, document.title, false)
+! ||instagram.com/ajax/bulk-route-definitions/$xhr
 
 ! Instagram video controls
 !instagram.com##+js(set-attr, video, controls)
@@ -296,7 +302,7 @@ mjg59.dreamwidth.org##.inner:style(padding-right:0px!important)
 /^https:\/\/x\.com\/(.*)/$doc,to=x.com,uritransform=//https:\/\/nitter.net\/$1/
 /^https:\/\/2coal\.com\/(.*)/$doc,to=2coal.com,uritransform=//https:\/\/ncore.pro/
 ||youtube.com/shorts/*$uritransform=/shorts\/([^\/?&]+)/watch?v=$1/
-||m.media-amazon.com/images/M*$uritransform=/_([^\/?&]+)/jpg/
+! ||m.media-amazon.com/images/M*$uritransform=/_([^\/?&]+)/jpg/
 ||www.reddit.com*$uritransform=/www([^\/?&]+)/old$1/
 ||ncore.pro/shop$uritransform=/\/shop$//
 
@@ -319,4 +325,10 @@ magyarepitok.hu##.head-info.mq-9-col-5.col-10 > .col-10
 magyarepitok.hu##div.row.bless.category-section, .ion-ios-cart.srch-btn
 magyarepitok.hu##div.row.default.category-section:has-text(/hírlevél/i)
 magyarepitok.hu##.footer-cnt:remove()
+
+! videa.hu
+videa.hu##.alert-info.alert
+
+! temu.com
+temu.com##._33LMUpZn, ._1eHrsim6
 

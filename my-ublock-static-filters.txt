@@ -1,5 +1,5 @@
 ! Title: My static filters
-! Last modified: 2026-02-07 10:00
+! Last modified: 2026-05-16 14:00
 ! Homepage: https://github.com/toguro-gh/uBlock-rules
 ! License: https://creativecommons.org/publicdomain/zero/1.0/legalcode.en
 
@@ -78,7 +78,7 @@ index.hu##.newbox.container.new-mediafuture, .newbox.container.velvethu, .newbox
 index.hu##.njs-carousel.exchange, .nm_thanks--base.nm_thanks, .nm_thanks--yellow.nm_thanks, .newbox.container.weborvoshu
 index.hu##.p1, .postcontent, #pp-box, section.bloghu,section.blokk_budapest, section.blokk_nezzen-bele
 index.hu##section.divany-doboz, section.normal-vezeto-blokk.femina-doboz.blokk, section.porthu-doboz-new
-index.hu##section.welove, .totalcar-joautok-doboz, .tulelokeszlet.border.container, .weather
+index.hu##section.welove, .totalcar-joautok-doboz, .tulelokeszlet.border.container, .weather, .megosztas-gomb
 index.hu##.szerzo-kep, ._iph_follow.btn-pass, .cikk-cover-v1.cikk-cover.container, .small.facebook.social-follow
 
 ! nCore
@@ -123,6 +123,7 @@ old.reddit.com##body:style(margin:auto!important; max-width: 850px)
 ! old.reddit.com##img#header-img:style(max-height: 75px!important; max-width: 850px)
 old.reddit.com##img#header-img:style(max-height: 75px!important; width: auto!important)
 old.reddit.com##.panestack-title:style(margin: 10px 10px 0px 10px!important)
+old.reddit.com##.unvoted.entry:has-text(AutoModerator)
 old.reddit.com##.selftext, .crosspost, .unvoted.midcol, .rank, .rounded.footer
 old.reddit.com##.video.hide-when-pinned, .listingsignupbar.infobar
 old.reddit.com###sr-header-area, #header-bottom-right, #hsts_pixel
@@ -141,6 +142,7 @@ old.reddit.com##.seo-comments-recommendations.spacer, #bottom-comments, .spacer.
 !old.reddit.com##.outbound.may-blank.invisible-when-pinned.thumbnail:style(width: 140px!important; height: 140px!important)
 !old.reddit.com##a img:style(height: auto!important;width: auto!important)
 !old.reddit.com##.cookie-infobar.with-btn.with-icon.md-container-small.reddit-infobar
+old.reddit.com##+js(trusted-click-element, button[name="over18"][value="yes"])
 
 ! Piratebay
 pirateproxylive.org##a[href="https://ultimatesurferprotector.com/"]:nth-of-type(2)
@@ -160,6 +162,8 @@ blogs.gnome.org##.comment-respond, #site-generator
 ! YouTube
 youtube.com$csp=worker-src 'none'
 youtube.com/sw.js*^$document
+! youtube.com###secondary:style(width:400px!important)
+youtube.com###secondary.ytd-watch-flexy:style(width:400px!important)
 youtube.com##[is-shorts]:upward(.ytd-rich-grid-renderer)
 youtube.com###content-section:style(opacity: .4; outline: 5px solid red)
 youtube.com##ytd-reel-shelf-renderer.ytd-item-section-renderer.style-scope
@@ -171,7 +175,10 @@ youtube.com###description.ytd-watch-metadata:hover:style(background:var( --yt-sp
 !youtube.com##ytd-rich-grid-renderer:style(--ytd-rich-grid-items-per-row: 4 !important)
 ! youtube.com##ytd-rich-item-renderer.ytd-rich-grid-renderer:has(.badge-style-type-members-only)
 youtube.com##ytd-rich-item-renderer.ytd-rich-grid-renderer:has(.yt-badge-shape--membership)
-youtube.com##.yt-lockup-view-model--flex-none.yt-lockup-view-model--rich-grid-legacy-margin:has-text("Members only")
+! youtube.com##.yt-lockup-view-model--flex-none.yt-lockup-view-model--rich-grid-legacy-margin:has-text(/Members only|Members first/)
+youtube.com##ytd-rich-item-renderer.ytd-rich-grid-renderer.style-scope:has-text(/Members only|Members first/)
+! youtube.com##yt-lockup-view-model.yt-lockup-view-model--wrapper.lockup.ytd-item-section-renderer:has-text(/Members only|Members first/)
+youtube.com##.ytLockupViewModelFlexNone:has-text(/Members only|Members first/)
 youtube.com##ytd-rich-item-renderer.ytd-rich-grid-renderer:has(.yt-lockup-view-model--collection-stack-2)
 ! youtube.com##ytd-rich-item-renderer.ytd-rich-grid-renderer:has(span.ytd-video-meta-block.style-scope.inline-metadata-item:has-text("Premieres"))
 ! youtube.com##ytd-rich-item-renderer.ytd-rich-grid-renderer:has(.yt-badge-shape__text:has-text("Upcoming"))
@@ -186,6 +193,7 @@ youtube.com##.html5-video-player.ended-mode .ytp-fullscreen-grid
 !youtube.com##.html5-video-player.ytp-fullscreen.ended-mode.ytp-autonav-endscreen-cancelled-state .html5-endscreen:style( top: 48px !important; )
 youtube.com##.ytp-overlay-bottom-right
 youtube-nocookie.com##.ytp-pause-overlay
+youtube.com###offer-module
 
 ! crazyshit.com
 crazyshit.com##.controls
@@ -216,6 +224,12 @@ en.wikipedia.org,hu.wikipedia.org##.ambox-cleanup-link_rot.ambox-style.ambox.met
 !telex.hu##a:visited:style(color:blue!important)
 !telex.hu##.navigation:style(background-color:#135!important)
 !telex.hu##a:link:style(text-decoration: underline!important)
+telex.hu##.modal--overlay--tax.modal--overlay:remove()
+telex.hu##.tax-widget, .telex-donate, .fb-box, .ov2026--box.ov2026
+telex.hu##.article-content.favorite.recommendation, .article-content.article-box
+telex.hu##.spacing-top.options-top.options, .navigation__button, .profile__btn.btn, .telex-links
+telex.hu##div.content-wrapper:nth-of-type(1), .ad.placeholder,.gpt-ad-container, .exchange-box
+telex.hu##.recommendation-list--ov26, .footer__app, .footer__highlights, .footer__social
 
 ! LKML
 ||lkml.org/images/*.gif
@@ -303,8 +317,10 @@ mjg59.dreamwidth.org##.inner:style(padding-right:0px!important)
 /^https:\/\/2coal\.com\/(.*)/$doc,to=2coal.com,uritransform=//https:\/\/ncore.pro/
 ||youtube.com/shorts/*$uritransform=/shorts\/([^\/?&]+)/watch?v=$1/
 ! ||m.media-amazon.com/images/M*$uritransform=/_([^\/?&]+)/jpg/
+||instagram.com/reels/*$uritransform=/reels\/([^\/?&]+)/p\/$1/
 ||www.reddit.com*$uritransform=/www([^\/?&]+)/old$1/
 ||ncore.pro/shop$uritransform=/\/shop$//
+
 
 ! Amazon
 amazon.de##.nav-flyout.nav-coreFlyout.glow-toaster-slot-default, #desktop-dp-ilm_feature_div_01
@@ -330,5 +346,13 @@ magyarepitok.hu##.footer-cnt:remove()
 videa.hu##.alert-info.alert
 
 ! temu.com
-temu.com##._33LMUpZn, ._1eHrsim6
+temu.com##._33LMUpZn, ._1eHrsim6, ._2LI8LvoR
+
+! VálaszOnline
+valaszonline.hu##.large:has-text('Donably')
+valaszonline.hu##.wp-post-image.fullwidth
+||www.valaszonline.hu/wp-content/uploads/2026/02/valasz-offline-no6-ner-aktak-banner-megrendeles.png$image
+||www.valaszonline.hu/wp-content/themes/vo/assets/barion-card-strip-intl.svg$image
+||www.valaszonline.hu/wp-content/uploads/2026/0*banner*.png$image
+! www.valaszonline.hu##.wp-post-image.fullwidth:style(max-height: 350px!important; width: auto!important)
 

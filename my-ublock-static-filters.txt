@@ -1,5 +1,5 @@
 ! Title: My static filters
-! Last modified: 2026-05-16 14:00
+! Last modified: 2026-07-22 21:45
 ! Homepage: https://github.com/toguro-gh/uBlock-rules
 ! License: https://creativecommons.org/publicdomain/zero/1.0/legalcode.en
 
@@ -29,11 +29,6 @@ aszodiattila.blog.hu##header
 ! DanLuu
 danluu.com##body:style(margin:20px auto; max-width:650px)
 
-! DrewDeVault
-||drewdevault.com/avatar*
-drewdevault.com##body:style(background-color:#ebedf3!important)
-drewdevault.com,emersion.fr##.webring
-
 ! emersion
 ||emersion.fr/node_modules/normalize.css/normalize.css
 
@@ -52,34 +47,6 @@ hup.hu##.node--view-mode-teaser.node--sticky.node--promoted.node, .feed-icons
 hup.hu###block-hupforumblokk, .layout-sidebar-second, .layout-sidebar-first
 hup.hu##a:has-text(/\[POL\]/i):upward(2)
 ||hup.hu/images/*
-
-! Index.hu
-index.hu##div.cimlap-cikkgyujto:style(width: 100% !important;)
-index.hu##.cikk-cimkek:style(margin-top:5px!important)
-index.hu##.index-header:style(box-shadow:inset 0 0px!important)
-index.hu##.index-header-wrapper:style(margin-bottom:15px!important)
-index.hu##.article-container:has(.cikkcim:has-text(/szoboszlai|pride/i))
-index.hu##.active.c-content-pager_button-down,.aisummit_index,.bekezdes_utan.linkpreview
-index.hu##body > .container.index2, .border.container.bank360, .c-content-pager_button-down
-index.hu##.c-content-pager_button-up, .cikk-bottom-text-ad, #cikkvegi_static_promo, #index-rovatok
-index.hu##.cimlap-blokk-index_divany.divany-header.container.divany-doboz.blokk, .zi-widget__wrapper
-index.hu##.cimlap-blokk-index_divany.normal-vezeto.normal-vezeto-blokk.divany-doboz.blokk
-index.hu##.cimlap-blokk-index_porthu.normal-vezeto.normal-vezeto-blokk.porthu-doboz-new.container.blokk
-index.hu##.cimlap-blokk-index_porthu.porthu-header-new.porthu-doboz-new.container.blokk
-index.hu##.c-index2-pager_link, .container.blokk.indaplay, .container.border.femina, div.betonepodcast
-index.hu##.container.border.otthonterkep2, .container.border.portfolio, div.bekezdes_utan.linkpreview:nth-of-type(5)
-index.hu##.container.border.sobors > .cimlap-blokk-index_femina.normal-vezeto.normal-vezeto-blokk.femina-doboz.blokk
-index.hu##.container.napihu, .divany-footer.normal-vezeto-blokk.divany-doboz.blokk, .cimlap-blokk-index.szponzoralt-blokk
-index.hu##div.esport1, div.femina, div.goal, div.greendex, div.kisallatos, div.pp-hasab, .social-stripe
-index.hu##div.velvet, .has-cntdown.no-sponsor.aisummit2025.info-stripe, .idojaras.showstopper, .newbox.container.bunteto
-index.hu###indavideo, .index-blog-header.container, ._iph_brk_act._iph_brk,.legfrissebb_wrapper
-index.hu##.legnezettebb_wrapper, .m-automatic-file-snippet,.m-cf-fejlec, .newbox.container.economxhu
-index.hu##.newbox.container.new-mediafuture, .newbox.container.velvethu, .newbox.container.welovehu
-index.hu##.njs-carousel.exchange, .nm_thanks--base.nm_thanks, .nm_thanks--yellow.nm_thanks, .newbox.container.weborvoshu
-index.hu##.p1, .postcontent, #pp-box, section.bloghu,section.blokk_budapest, section.blokk_nezzen-bele
-index.hu##section.divany-doboz, section.normal-vezeto-blokk.femina-doboz.blokk, section.porthu-doboz-new
-index.hu##section.welove, .totalcar-joautok-doboz, .tulelokeszlet.border.container, .weather, .megosztas-gomb
-index.hu##.szerzo-kep, ._iph_follow.btn-pass, .cikk-cover-v1.cikk-cover.container, .small.facebook.social-follow
 
 ! nCore
 ncore.pro##.news_right2:style(width: auto!important)
@@ -224,12 +191,17 @@ en.wikipedia.org,hu.wikipedia.org##.ambox-cleanup-link_rot.ambox-style.ambox.met
 !telex.hu##a:visited:style(color:blue!important)
 !telex.hu##.navigation:style(background-color:#135!important)
 !telex.hu##a:link:style(text-decoration: underline!important)
+telex.hu##.navigation--options:style(height:40px!important)
+telex.hu##.navigation__logo > svg:style(height:25px!important)
 telex.hu##.modal--overlay--tax.modal--overlay:remove()
-telex.hu##.tax-widget, .telex-donate, .fb-box, .ov2026--box.ov2026
+telex.hu##.pip__video.pip:remove()
+telex.hu##.spotify-embed:remove()
+telex.hu##.tax-widget, .telex-donate, .fb-box, .ov2026--box.ov2026, .google-box
 telex.hu##.article-content.favorite.recommendation, .article-content.article-box
 telex.hu##.spacing-top.options-top.options, .navigation__button, .profile__btn.btn, .telex-links
-telex.hu##div.content-wrapper:nth-of-type(1), .ad.placeholder,.gpt-ad-container, .exchange-box
-telex.hu##.recommendation-list--ov26, .footer__app, .footer__highlights, .footer__social
+telex.hu##div.content-wrapper:nth-of-type(1), .ad.placeholder,.gpt-ad-container, .exchange-box, .list__item--english
+telex.hu##.recommendation-list--ov26, .footer__app, .footer__highlights, .footer__social, .list__item--telex--pr-cikk, .list__item--pr-cikk
+telex.hu##.list__item--telex--sport, .navigation--tag, .navigation--domain, .sport, .list__item--prm, .list__item--tamogatott-tartalom
 
 ! LKML
 ||lkml.org/images/*.gif
@@ -355,4 +327,31 @@ valaszonline.hu##.wp-post-image.fullwidth
 ||www.valaszonline.hu/wp-content/themes/vo/assets/barion-card-strip-intl.svg$image
 ||www.valaszonline.hu/wp-content/uploads/2026/0*banner*.png$image
 ! www.valaszonline.hu##.wp-post-image.fullwidth:style(max-height: 350px!important; width: auto!important)
+
+! Átlátszó.hu
+atlatszo.hu##.page_title:style(margin-top:100px!important)
+atlatszo.hu##.inner-sidebar:style(margin-top:100px!important)
+atlatszo.hu##.support2024, .post_outro_title
+atlatszo.hu##.wp-embedded-content, .more_posts, .contact_us
+atlatszo.hu##.header-item.header-support, .image_banner.banner
+
+! FloraVita Shop
+floravita.superwebaruhaz.hu##.akw-tab-content, .alert-danger
+floravita.superwebaruhaz.hu###module-order-reviews, .mt-lg.module-content
+floravita.superwebaruhaz.hu###module-awards, #module-partners
+||www.superwebaruhaz.hu/shops/2635/images/bg.jpg$image
+||img.casual.hu/shops/2635/images/header.jpg$image
+
+! Portfolio
+portfolio.hu##.container-xl, .google-source-pref, .pr-articles-block.grid-block
+portfolio.hu##.conference-calendar-block, .forum-block.grid-block
+portfolio.hu##.frontpage-articles-fix-block, .newsletter-subscribe-block
+portfolio.hu##.podcast-lab-fix-block, .trader-block, .footer--imgs
+portfolio.hu##.conference-widget, .related, .blogger-block
+portfolio.hu##.standard.zoom.main-image.pfarticle-title > .position-relative
+||www.penzcentrum.hu/sporteredmenyek/iframe$subdocument
+||www.opten.hu/lights/gombok/portfolio2$subdocument
+
+! NAV árverések
+arveres.nav.gov.hu##.colAuctionImage:style(height:250px!important)
 

@@ -1,32 +1,7 @@
 ! Title: Mobile list for Firefox
-! Last modified: 2025-11-07 10:15
+! Last modified: 2026-07-24 12:15
 ! Homepage: https://github.com/toguro-gh/uBlock-rules
 ! License: https://creativecommons.org/publicdomain/zero/1.0/legalcode.en
-
-! HUP
-hup.hu##.layout-content:style(margin:auto!important; width: 100%!important)
-hup.hu##img:style(display:block; margin-left:auto; margin-right:auto)
-hup.hu##iframe:style(max-width:400px!important; max-height:200px!important)
-hup.hu##video:style(width:400px!important)
-hup.hu##.node--view-mode-teaser.node--sticky.node--promoted.node, .feed-icons
-hup.hu###block-hupforumblokk, .layout-sidebar-second, .layout-sidebar-first
-hup.hu##.layout-container > footer
-||hup.hu/images/*
-
-! Index.hu
-index.hu##.index-header-wrapper:style(margin-top:-45px!important)
-index.hu##.m-cf-kiadvanylista, .exchange-ticker, .pp-hasab
-index.hu##.weatherajanlo_wrapper, .idojaras.showstopper
-index.hu##.m-cf-fejlec, .m-page-footer, .newbox, .femina
-index.hu##.porthu-doboz-new.container, .container.bloghu
-index.hu##.betonepodcast, .bcs-position-cimlap_femina_doboz
-index.hu##.mobile-open-btn, .divany-doboz.blokk, .kisallatos
-index.hu##.indaplay, .legnezettebb_wrapper, .legfrissebb_wrapper
-index.hu##.blokk:nth-of-type(4), .m-automatic-file-snippet
-index.hu##.cikk-cover, .btn-pass, .szerzo-kep, .megoszt
-index.hu##.app_promo_wrapper, .index-social-box,.social-follow
-index.hu##.m-automatic-file-snippet, .trending-topics
-index.hu##.embedded-video:remove()
 
 ! Phoronix
 phoronix.com##article:has(.details:has-text(/Promotion|Highlights|Phoronix/))
@@ -86,7 +61,22 @@ instagram.com##div[role="button"]:has(> div > video)
 ! Amazon
 amazon.de##.nav-flyout.nav-coreFlyout.glow-toaster-slot-default, #desktop-dp-ilm_feature_div_01
 
-
+! Telex
+!telex.hu##a:link:style(color:#096!important)
+!telex.hu##a:visited:style(color:blue!important)
+!telex.hu##.navigation:style(background-color:#135!important)
+!telex.hu##a:link:style(text-decoration: underline!important)
+telex.hu##.navigation--options:style(height:40px!important)
+telex.hu##.navigation__logo > svg:style(height:25px!important)
+telex.hu##.modal--overlay--tax.modal--overlay:remove()
+telex.hu##.pip__video.pip:remove()
+telex.hu##.spotify-embed:remove()
+telex.hu##.tax-widget, .telex-donate, .fb-box, .ov2026--box.ov2026, .google-box
+telex.hu##.article-content.favorite.recommendation, .article-content.article-box
+telex.hu##.spacing-top.options-top.options, .navigation__button, .profile__btn.btn, .telex-links
+telex.hu##div.content-wrapper:nth-of-type(1), .ad.placeholder,.gpt-ad-container, .exchange-box, .list__item--english
+telex.hu##.recommendation-list--ov26, .footer__app, .footer__highlights, .footer__social, .list__item--telex--pr-cikk, .list__item--pr-cikk
+telex.hu##.list__item--telex--sport, .navigation--tag, .navigation--domain, .sport, .list__item--prm, .list__item--tamogatott-tartalom
 
 
 

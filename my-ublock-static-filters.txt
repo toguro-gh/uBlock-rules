@@ -1,5 +1,5 @@
 ! Title: My static filters
-! Last modified: 2026-07-22 21:45
+! Last modified: 2026-09-26 17:05
 ! Homepage: https://github.com/toguro-gh/uBlock-rules
 ! License: https://creativecommons.org/publicdomain/zero/1.0/legalcode.en
 
@@ -70,6 +70,7 @@ askubuntu.com,superuser.com,serverfault.com,unix.stackexchange.com,stackoverflow
 
 ! Phoronix
 phoronix.com##article:has(.details:has-text(/Promotion|Highlights|Phoronix|Premium/))
+phoronix.com##.content:style(text-align: justify; hyphens: auto; hyphenate-limit-chars: 6 3 2;)
 phoronix.com##article.important header a::before:style(content:""!important; padding: 0!important; margin-right: 0px!important)
 phoronix.com##aside.widget:has-text(/Go Premium|Support Phoronix/)
 phoronix.com##p:has-text(/joining Phoronix Premium/)
@@ -161,6 +162,10 @@ youtube.com##.html5-video-player.ended-mode .ytp-fullscreen-grid
 youtube.com##.ytp-overlay-bottom-right
 youtube-nocookie.com##.ytp-pause-overlay
 youtube.com###offer-module
+! youtube.com##:has(a[href*="support.google.com/youtube?p=ppp&nohelpkit=1"])
+youtube.com##.ytp-paid-content-overlay
+! youtube.com##.ytm-paid-content-overlay-renderer.ytmPaidContentOverlayHost.ytmPaidContentOverlayHostCompact
+youtube.com##.ytInlinePlayerControlsTopLeftControls:has(a[href*="support.google.com/youtube?p=ppp&nohelpkit=1"])
 
 ! crazyshit.com
 crazyshit.com##.controls
@@ -193,12 +198,16 @@ en.wikipedia.org,hu.wikipedia.org##.ambox-cleanup-link_rot.ambox-style.ambox.met
 !telex.hu##a:link:style(text-decoration: underline!important)
 telex.hu##.navigation--options:style(height:40px!important)
 telex.hu##.navigation__logo > svg:style(height:25px!important)
+telex.hu##.placeholder_:style(background-color: transparent!important)
+telex.hu##p:style(text-align: justify; hyphens: auto; hyphenate-limit-chars: 6 3 2;)
+telex.hu##.pointer-none > .placeholder_:style(max-height:500px!important; width:auto!important)
+telex.hu##.cover_image_text:style(width:750px)
 telex.hu##.modal--overlay--tax.modal--overlay:remove()
 telex.hu##.pip__video.pip:remove()
 telex.hu##.spotify-embed:remove()
 telex.hu##.tax-widget, .telex-donate, .fb-box, .ov2026--box.ov2026, .google-box
 telex.hu##.article-content.favorite.recommendation, .article-content.article-box
-telex.hu##.spacing-top.options-top.options, .navigation__button, .profile__btn.btn, .telex-links
+telex.hu##.spacing-top.options-top.options, .navigation__button, .profile__btn.btn, .telex-links, .sidebar_container_
 telex.hu##div.content-wrapper:nth-of-type(1), .ad.placeholder,.gpt-ad-container, .exchange-box, .list__item--english
 telex.hu##.recommendation-list--ov26, .footer__app, .footer__highlights, .footer__social, .list__item--telex--pr-cikk, .list__item--pr-cikk
 telex.hu##.list__item--telex--sport, .navigation--tag, .navigation--domain, .sport, .list__item--prm, .list__item--tamogatott-tartalom
@@ -222,6 +231,8 @@ movsw.0x0.st##.description, .warn._block.caution
 ||movsw.0x0.st/files/ec4fd5c4-725e-4bb3-b584-7c84ab6c232e
 
 ! hasznaltauto.hu
+! hasznaltauto.hu##.pe-auto.object-fit-contain.h-100.w-100.position-absolute.align-items-center.justify-content-center.d-flex.full-screen-gallery__non-image
+hasznaltauto.hu##.full-screen-gallery__non-image
 hasznaltauto.hu##.tabboccordion, .recommendation, .footer-united-platforms, .garazs-article, .col-md-6.col-12.d-print-none
 hasznaltauto.hu##.gap-3.flex-column.d-xl-flex.d-none.d-print-none, .border-white.border-top, .full-screen-gallery__sidebar
 hasznaltauto.hu###money-calculator, #shops-and-services, .p-3.gap-3.flex-column.d-flex > div > .d-print-none
@@ -285,12 +296,14 @@ mjg59.dreamwidth.org###content:style(border-right:0px!important)
 mjg59.dreamwidth.org##.inner:style(padding-right:0px!important)
 
 ! Redirects
-/^https:\/\/x\.com\/(.*)/$doc,to=x.com,uritransform=//https:\/\/nitter.net\/$1/
+! /^https:\/\/x\.com\/(.*)/$doc,to=x.com,uritransform=//https:\/\/nitter.net\/$1/
 /^https:\/\/2coal\.com\/(.*)/$doc,to=2coal.com,uritransform=//https:\/\/ncore.pro/
 ||youtube.com/shorts/*$uritransform=/shorts\/([^\/?&]+)/watch?v=$1/
+||facebook.com/reel/*$uritransform=/reel\/([0-9]+).*/watch?v=$1/
 ! ||m.media-amazon.com/images/M*$uritransform=/_([^\/?&]+)/jpg/
 ||instagram.com/reels/*$uritransform=/reels\/([^\/?&]+)/p\/$1/
-||www.reddit.com*$uritransform=/www([^\/?&]+)/old$1/
+! ||www.reddit.com*$uritransform=/www([^\/?&]+)/old$1/
+||old.reddit.com*$uritransform=/old([^\/?&]+)/www$1/
 ||ncore.pro/shop$uritransform=/\/shop$//
 
 
@@ -354,4 +367,13 @@ portfolio.hu##.standard.zoom.main-image.pfarticle-title > .position-relative
 
 ! NAV árverések
 arveres.nav.gov.hu##.colAuctionImage:style(height:250px!important)
+
+! JustETF
+justetf.com##div.m-sep-l.container:has-text(/Savings plan|Interesting ETF investment|Order fees/)
+justetf.com##.jumbo-dark.jumbo-blue.jumbo-teaser, .providerbar, .px-3.py-5.text-center, [href="#savings-plan"], [href="#order-fees"]
+
+! Villanyautosok.hu
+villanyautosok.hu###ma-ba, .hvers, #social-links, .widget_mailster_signup, .podcastajanlo
+villanyautosok.hu###topbuttons, #googlebutton, #custom-push-placeholder, #rsp, #authorcard
+villanyautosok.hu##.le-ba, #left-sidebar, #topline, #disqus_recommendations, #blokkok, .jo-si-2-ba.rek
 
